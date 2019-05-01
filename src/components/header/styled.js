@@ -10,7 +10,6 @@ import { rem } from '../../utils/helpers';
 export const Section = styled(Wrapper)`
     width: 100%;
     text-align: center;
-    background-size: cover;
     color: #FFF;
 `;
 
@@ -33,11 +32,10 @@ export const Title = styled(MDReactComponent)`
     }
 `;
 
-export const Text = styled.h3`
+export const Text = styled(MDReactComponent)`
     font-size: ${rem(14)};
     font-weight: 300;
     max-width: ${rem(230)};
-    text-align: center;
     margin: 0 auto;
     line-height: 1.7;
     margin-top: ${rem(25)};

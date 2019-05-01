@@ -16,10 +16,13 @@ const Header = () => {
             <Container>
                 <Logo />
                 <Title 
-                    text={title.mobile} 
+                    text={title.mobile}
                     tags={{html: 'h2'}}
                 />
-                <Text>{text}</Text>
+                <Text
+                    text={text}
+                    tags={{html: 'h3'}}   
+                />
                 <Button>{buttonCTA}</Button>
             </Container>
         </Section>
