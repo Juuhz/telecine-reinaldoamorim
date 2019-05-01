@@ -12,7 +12,7 @@ const Page = ({ children, title = 'Influencers Match' }) => (
       <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
       <link rel="icon" type="image/png" href="../../../static/images/logo-topo.png" />
       <link rel="stylesheet" href="../../../static/css/style.css" />
-      <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
     </Head>
     
     {children}

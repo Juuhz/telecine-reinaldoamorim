@@ -20,10 +20,10 @@
   "homepage": "https://bitbucket.org/juuhz/ra_react#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "markdown-react-js": "^1.0.2",
     "next": "^8.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-markdown": "^4.0.8",
     "react-redux": "^7.0.2",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",

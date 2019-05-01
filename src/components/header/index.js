@@ -6,7 +6,7 @@ import HeaderProps from '../../api/header';
 
 // Import Style
 import {
-    Section, Logo, Title
+    Section, Logo, Title, Text, Button
 } from './styled';
 
 const Header = () => {
@@ -15,7 +15,12 @@ const Header = () => {
         <Section id="header">
             <Container>
                 <Logo />
-                <Title>{title.mobile}</Title>
+                <Title 
+                    text={title.mobile} 
+                    tags={{html: 'h2'}}
+                />
+                <Text>{text}</Text>
+                <Button>{buttonCTA}</Button>
             </Container>
         </Section>
     );

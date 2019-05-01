@@ -1,6 +1,6 @@
 const HeaderProps = {
     "title": {
-        "mobile": "Filmes exclusivos \ndos maiores \nestúdios, é **só dar um \nplay**",
+        "mobile": "Filmes exclusivos \n\ndos maiores \n\nestúdios, é **só dar um play**",
         "desktop": ""
     },
     "text": "Curta 7 dias grátis, assine por R$ 37,90/mês e cancele quando quiser.",
