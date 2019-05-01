@@ -1,0 +1,36 @@
+/* RESET */
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+/* HTML */
+html {
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body{
+    overflow-x: hidden;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #222;
+    background: #1e1f26;
+}
+
+/* LIST */
+ul,li{
+	list-style: none;
+}
+
+/* SELECIONAR */
+::selection {
+    background-color: #838D9A !important;
+    color: #293144 !important;
+}
