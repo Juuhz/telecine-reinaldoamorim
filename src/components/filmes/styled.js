@@ -65,7 +65,7 @@ export const Section = styled(Wrapper)`
             justify-content: space-between;
             padding: 0px ${rem(20)};
             max-width: ${rem(370)};
-            margin: ${rem(30)} auto 0;
+            margin: ${rem(35)} auto 0;
             li{
                 width: ${rem(15)};
                 button{ 

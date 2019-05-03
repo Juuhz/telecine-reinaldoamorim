@@ -2,53 +2,53 @@
 import React, { Component } from 'react';
 
 // Import Ultils
-import Slider from "react-slick";
 import { Container } from '../../utils/class';
 
 // Import API
-import FilmesProps from '../../api/filmes';
+import DispositivosProps from '../../api/dispositivos';
 
 // Import Style
 import {
-    Section, ItemWrapper, Image
+    Section, Title, ItensWrapper, ItemWrapper,
+    TitleItem, ImageItem, TitleList, List, Label
 } from './styled';
 
-class Filmes extends Component{
+class Dispositivos extends Component{
 
-    /* renderItemSlide = ( item ) => {
-        return(
-            <ItemWrapper>
-                <Image src={item.poster_m} alt={item.titulo_portugues} title={`Assista: ${item.titulo_portugues}`} />
-            </ItemWrapper>
-        )
-    } */
+    renderItem = ( item, key ) => (
+        <ItemWrapper key={key}>
+            {
+                item.title &&
+                    <TitleItem>{item.title}</TitleItem>
+            }
+            <ImageItem {...item.image} />
+            <TitleList>{item.list.title}</TitleList>
+            <List>
+                {
+                    item.list.itens.map( ( label, keyLabel ) => (
+                        <Label key={keyLabel}>{label.text}</Label>
+                    )) 
+                }
+            </List>
+        </ItemWrapper>
+    )
 
     render(){
-        // Pega as informações dos filmes
-        const { data } = FilmesProps;
-
-        // Configuração do slide
-        const settings = {
-            dots: true,
-            arrows: false,
-            className: "center",
-            centerMode: true,
-            infinite: true,
-            centerPadding: "60px",
-            slidesToShow: 1,
-            speed: 500
-        };
+        const { title, itens } = DispositivosProps;
 
         return(
-            <Section id="filmes">
-                <Slider {...settings}>
-                    {  
-                        data.map( ( item, key ) => this.renderItemSlide( item ) )
-                    }
-                </Slider>
+            <Section id="dispositivos">
+                <Container>
+                    <Title>{title}</Title>
+                    <ItensWrapper>
+                        {  
+                            itens.map( ( item, key ) => this.renderItem( item, key ) )
+                        }
+                    </ItensWrapper>
+                </Container>
             </Section>
         );
     }
 }
 
-export default Filmes;
+export default Dispositivos;

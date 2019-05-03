@@ -6,11 +6,13 @@ import Page from '../components/page';
 import Header from '../components/header';
 import Modal from '../components/modal';
 import Filmes from '../components/filmes';
+import Dispositivos from '../components/dispositivos';
 
 const Home = ({ modalStatus }) => (
   <Page>
     <Header />
     <Filmes />
+    <Dispositivos />
     {/* {
       modalStatus &&
         <Modal />

@@ -12,13 +12,13 @@ const DispositivosProps = {
                 "title": "Assista na TV",
                 "itens": [
                     {
-                        "label": "Smart Tvs"
+                        "text": "Smart Tvs"
                     },
                     {
-                        "label": "Chromecast"
+                        "text": "Chromecast"
                     },
                     {
-                        "label": "Xbox One"
+                        "text": "Xbox One"
                     }
                 ]
             }
@@ -31,16 +31,16 @@ const DispositivosProps = {
                 "title": "Assista onde você quiser"
             },
             "list": {
-                "title": "Assista na TV",
+                "title": "Ou onde quiser",
                 "itens": [
                     {
-                        "label": "Android"
+                        "text": "Android"
                     },
                     {
-                        "label": "IOS"
+                        "text": "IOS"
                     },
                     {
-                        "label": "PC"
+                        "text": "PC"
                     }
                 ]
             }

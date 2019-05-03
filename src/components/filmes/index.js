@@ -15,13 +15,11 @@ import {
 
 class Filmes extends Component{
 
-    renderItemSlide = ( item ) => {
-        return(
-            <ItemWrapper>
-                <Image src={item.poster_m} alt={item.titulo_portugues} title={`Assista: ${item.titulo_portugues}`} />
-            </ItemWrapper>
-        )
-    }
+    renderItemSlide = ( item, key ) => (
+        <ItemWrapper key={key}>
+            <Image src={item.poster_m} alt={item.titulo_portugues} title={`Assista: ${item.titulo_portugues}`} />
+        </ItemWrapper>
+    )
 
     render(){
         // Pega as informações dos filmes
@@ -43,7 +41,7 @@ class Filmes extends Component{
             <Section id="filmes">
                 <Slider {...settings}>
                     {  
-                        data.map( ( item, key ) => this.renderItemSlide( item ) )
+                        data.map( ( item, key ) => this.renderItemSlide( item, key ) )
                     }
                 </Slider>
             </Section>
