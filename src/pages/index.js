@@ -7,12 +7,14 @@ import Header from '../components/header';
 import Modal from '../components/modal';
 import Filmes from '../components/filmes';
 import Dispositivos from '../components/dispositivos';
+import Footer from '../components/footer';
 
 const Home = ({ modalStatus }) => (
   <Page>
     <Header />
     <Filmes />
     <Dispositivos />
+    <Footer />
     {/* {
       modalStatus &&
         <Modal />

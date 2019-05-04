@@ -2,9 +2,8 @@
 import styled from 'styled-components';
 
 // Import Utils
-import MDReactComponent from 'markdown-react-js';
 import { Wrapper } from '../../utils/class';
-import { RED, LIGTH_GRAY, DARK_GRAY } from '../../utils/variables';
+import { LIGTH_GRAY } from '../../utils/variables';
 import { rem } from '../../utils/helpers';
 
 export const Section = styled(Wrapper)`
@@ -12,33 +11,33 @@ export const Section = styled(Wrapper)`
     background-size: cover;
     color: #FFF;
     background: ${LIGTH_GRAY};
-    padding: 0px 15px 10px;
-    margin-top: -50px;
+    padding: 0px ${rem(15)} ${rem(1)};
+    margin-top: ${rem(-50)};
 `;
 
 export const Title = styled.h2`
-    font-size: 14px;
+    font-size: ${rem(14)};
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: ${rem(3)};
     font-weight: 400;
     position: relative;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: ${rem(20)};
 
     &:after{
         content: "";
-        width: 80px;
-        height: 2px;
+        width: ${rem(80)};
+        height: ${rem(2)};
         background: #FFF;
         position: absolute;
-        right: -100px;
-        top: 8px;
+        right: ${rem(-100)};
+        top: ${rem(8)};
         opacity: 0.4;
     }
 `;
 
 export const ItensWrapper = styled.div`
-    margin-top: 10px;
+    margin-top: ${rem(10)};
 `;
 
 export const ItemWrapper = styled.div`
@@ -46,22 +45,22 @@ export const ItemWrapper = styled.div`
 `;
 
 export const TitleItem = styled.p`
-    font-size: 20px;
+    font-size: ${rem(20)};
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: ${rem(20)};
     font-weight: 300;
 `;
 
 export const ImageItem = styled.img`
     max-width: 100%;
-    border-radius: 15px;
+    border-radius: ${rem(15)};
 `;
 
 export const TitleList = styled.h3`
-    font-size: 16px;
+    font-size: ${rem(16)};
     font-weight: 400;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: ${rem(10)};
+    margin-bottom: ${rem(10)};
 `;
 
 export const List = styled.ul`
@@ -70,24 +69,24 @@ export const List = styled.ul`
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: ${rem(15)};
 `;
 
 export const Label = styled.li`
     width: 50%;
     font-weight: 300;
-    margin-bottom: 15px;
+    margin-bottom: ${rem(15)};
     position: relative;
-    padding-left: 27px;
+    padding-left: ${rem(27)};
 
     &:before{
         content: "";
         position: absolute;
         left: 0px;
-        top: 6px;
+        top: ${rem(6)};
         background: url('/static/images/check.svg') no-repeat center center;
-        width: 15px;
-        height: 10px;
+        width: ${rem(15)};
+        height: ${rem(10)};
         background-size: cover;
         opacity: 0.8;
     }
