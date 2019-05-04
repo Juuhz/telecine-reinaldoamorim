@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // Import Utils
 import { Wrapper } from '../../utils/class';
-import { RED } from '../../utils/variables';
+import { RED, DARK_RED } from '../../utils/variables';
 import { rem } from '../../utils/helpers';
 
 export const Section = styled(Wrapper)`
@@ -32,4 +32,9 @@ export const HelpLink = styled.a`
     text-decoration: none;
     margin-bottom: ${rem(25)};
     display: inline-block;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        color: ${DARK_RED};
+    }
 `;
