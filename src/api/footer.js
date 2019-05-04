@@ -1,7 +1,7 @@
 const FooterProps = {
     "text": "Ficou com alguma dúvida?",
     "link": {
-        "href": "#",
+        "href": "https://ajuda.telecineplay.com.br/",
         "text": "Acesse nossa ajuda"
     }
 }

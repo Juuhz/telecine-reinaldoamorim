@@ -2,9 +2,8 @@
 import styled from 'styled-components';
 
 // Import Utils
-import MDReactComponent from 'markdown-react-js';
 import { Wrapper } from '../../utils/class';
-import { RED, LIGTH_GRAY, DARK_GRAY } from '../../utils/variables';
+import { LIGTH_GRAY, DARK_GRAY } from '../../utils/variables';
 import { rem } from '../../utils/helpers';
 
 export const Section = styled(Wrapper)`
@@ -55,6 +54,12 @@ export const Section = styled(Wrapper)`
             float: left;
             height: 100%;
             min-height: ${rem(1)};
+            &.slick-current:hover{
+                .playButton{
+                    opacity: 1;
+                    z-index: 2;
+                }
+            }
         }
         &.slick-initialized .slick-slide{
             display: block;
@@ -89,10 +94,38 @@ export const Section = styled(Wrapper)`
 
 export const ItemWrapper = styled.div`
     position: relative;
-    padding: 0px 12px;
+    padding: 0px ${rem(12)};
+    outline: none;
 `;
 
 export const Image = styled.img`
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: ${rem(10)};
+`;
+
+export const Play = styled.div`
+    position: absolute;
+    top: 0px;
+    left: ${rem(12)};
+    display: flex;
+    background: rgba( 0,0,0,0.8 );
+    width: calc( 100% - ${rem(24)} );
+    height: calc( 100% - ${rem(5)} );
+    border-radius: ${rem(10)};
+    justify-content: center;
+    align-items: center;
+    flex-flow: column-reverse;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:after{
+        content: "";
+        position: relative;
+        background: url( '/static/images/play.svg' ) no-repeat center center;
+        width: ${rem(60)};
+        height: ${rem(60)};
+        margin-bottom: ${rem(10)};
+    }
 `;

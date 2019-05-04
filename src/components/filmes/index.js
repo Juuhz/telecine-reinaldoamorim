@@ -10,7 +10,7 @@ import FilmesProps from '../../api/filmes';
 
 // Import Style
 import {
-    Section, ItemWrapper, Image
+    Section, ItemWrapper, Image, Play
 } from './styled';
 
 class Filmes extends Component{
@@ -18,6 +18,7 @@ class Filmes extends Component{
     renderItemSlide = ( item, key ) => (
         <ItemWrapper key={key}>
             <Image src={item.poster_m} alt={item.titulo_portugues} title={`Assista: ${item.titulo_portugues}`} />
+            <Play className="playButton">Dê um Play</Play>
         </ItemWrapper>
     )
 
