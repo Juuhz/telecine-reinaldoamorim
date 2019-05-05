@@ -16,8 +16,7 @@ const Page = ({ children, title = 'Assista filmes online onde você quiser pelo 
     </Head>
     
     {children}
-
-    <footer></footer>
+    
   </div>
 );
 

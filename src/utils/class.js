@@ -18,5 +18,13 @@ export const Container = styled.div`
         max-width: ${rem(704)};
         padding: 0px;
     }
+
+    @media (min-width: 1024px){
+        max-width: ${rem(960)};
+    }
+
+    @media (min-width: 1200px){
+        max-width: ${rem(1170)};
+    }
 `;
 

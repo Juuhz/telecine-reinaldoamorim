@@ -1,13 +1,13 @@
 // Import React Defaults
 import React, { Component } from 'react';
 
-// Import Ultils
+// Import Utils
 import { Container } from '../../../utils/class';
 
 // Import Style
 import {
-    Section, Title, SubTitle, Text, ItensWrapper,
-    ItemWrapper, ImageItem, TitleList, List, Label
+    Section, BoxInfos, Infos, Title, SubTitle, Text,
+    ItensWrapper, ItemWrapper, ImageItem, TitleList, List, Label
 } from './styled';
 
 class Devices extends Component{
@@ -33,16 +33,20 @@ class Devices extends Component{
             <Section id="devices">
                 <Container>
                     <Title>{title}</Title>
-                    <SubTitle>{subTitle}</SubTitle>
-                    <Text
-                        text={text}
-                        tags={{html: 'p'}}
-                    />
-                    <ItensWrapper>
-                        {  
-                            itens.map( ( item, key ) => this.renderItem( item, key ) )
-                        }
-                    </ItensWrapper>
+                    <BoxInfos>
+                        <Infos>
+                            <SubTitle>{subTitle}</SubTitle>
+                            <Text
+                                text={text}
+                                tags={{html: 'span'}}
+                            />
+                        </Infos>
+                        <ItensWrapper>
+                            {  
+                                itens.map( ( item, key ) => this.renderItem( item, key ) )
+                            }
+                        </ItensWrapper>
+                    </BoxInfos>
                 </Container>
             </Section>
         );

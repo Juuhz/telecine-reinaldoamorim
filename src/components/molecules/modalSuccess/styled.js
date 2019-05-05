@@ -10,9 +10,9 @@ export const Section = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
 `;
 
 export const BoxContent = styled.div`
@@ -33,6 +33,7 @@ export const Text = styled(MDReactComponent)`
     margin-top: ${rem(20)};
     margin-bottom: ${rem(10)};
     display: block;
+    max-width: 500px;
 
     @media (min-width: 375px){
         font-size: ${rem(15)};

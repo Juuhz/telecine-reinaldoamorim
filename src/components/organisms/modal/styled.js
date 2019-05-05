@@ -14,14 +14,13 @@ export const ModalWrapper = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    display: flex;
     justify-content: center;
     align-items: center;
 `;
 
 export const ModalContent = styled.div`
     width: 100%;
-    max-width: ${rem(650)};
+    max-width: 100%;
     height: 100%;
     background: ${DARK_GRAY};
     position: relative;

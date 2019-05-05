@@ -38,21 +38,25 @@ class Movies extends Component{
             centerMode: true,
             infinite: true,
             centerPadding: "60px",
-            slidesToShow: 1,
+            slidesToShow: 6,
             speed: 500,
             responsive: [
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 5,
+                    }
+                },
                 {
                     breakpoint: 1023,
                     settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 3,
                     }
                 },
                 {
                     breakpoint: 767,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1,
                     }
                 }
             ]

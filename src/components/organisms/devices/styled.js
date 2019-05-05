@@ -16,6 +16,21 @@ export const Section = styled(Wrapper)`
     margin-top: ${rem(-50)};
 `;
 
+export const BoxInfos = styled.div`
+    @media(min-width: 1200px){
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+    }
+`;
+
+export const Infos = styled.div`
+    @media(min-width: 1200px){
+        width: 36%;
+        margin-right: 5%;
+    }
+`;
+
 export const Title = styled.h2`
     font-size: ${rem(14)};
     text-transform: uppercase;
@@ -47,6 +62,10 @@ export const SubTitle = styled.p`
     @media (min-width: 734px){
         max-width: 100%;
     }
+
+    @media(min-width: 1200px){
+        margin-top: 46px;
+    }
 `;
 
 export const Text = styled(MDReactComponent)`
@@ -68,6 +87,10 @@ export const ItensWrapper = styled.div`
         display: flex;
         flex-flow: row;
         justify-content: space-between;
+    }
+
+    @media(min-width: 1200px){
+        margin-top: 0px;
     }
 `;
 
@@ -117,5 +140,13 @@ export const Label = styled.li`
         height: ${rem(10)};
         background-size: cover;
         opacity: 0.8;
+    }
+
+    @media (min-width: 1024px){
+        width: 25%;
+    }
+
+    @media(min-width: 1200px){
+        width: 50%;
     }
 `;
