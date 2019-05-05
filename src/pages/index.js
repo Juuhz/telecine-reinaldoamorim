@@ -15,10 +15,10 @@ const Home = ({ modalStatus }) => (
     <Filmes />
     <Dispositivos />
     <Footer />
-    {/* {
+    {
       modalStatus &&
         <Modal />
-    } */}
+    }
   </Page>
 );
 

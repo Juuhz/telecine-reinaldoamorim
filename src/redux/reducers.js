@@ -11,15 +11,13 @@ import { actionTypes } from './actions';
 // Reducers
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.SET_INFLUENCER:
+    case actionTypes.MODAL_STATUS:
       return Object.assign({}, state, {
-        modalInfluencer: action.modalInfluencer,
-        modalStatus: true
+        modalStatus: action.modalStatus
       })
-    case actionTypes.CLOSE_MODAL:
+    case actionTypes.LOADER_STATUS:
       return Object.assign({}, state, {
-        modalInfluencer: false,
-        modalStatus: false
+        loaderStatus: action.loaderStatus
       })
     default:
       return state

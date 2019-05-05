@@ -1,5 +1,6 @@
 // Imports React Defaults
 import App, { Container } from 'next/app'
+import { ThemeProvider } from 'styled-components'
 import React from 'react'
 
 // Import Utils
@@ -12,11 +13,13 @@ class MyApp extends App {
     return (
       <Container>
         <Provider store={reduxStore}>
-          <Component {...pageProps} />
+          <ThemeProvider theme={{}}>
+            <Component {...pageProps} />
+          </ThemeProvider>
         </Provider>
       </Container>
     )
   }
 }
 
-export default withReduxStore( MyApp )
+export default withReduxStore( MyApp );

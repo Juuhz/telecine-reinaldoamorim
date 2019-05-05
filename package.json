@@ -19,6 +19,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/juuhz/ra_react#readme",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
     "express": "^4.16.4",
     "markdown-react-js": "^1.0.2",
     "next": "^8.0.3",

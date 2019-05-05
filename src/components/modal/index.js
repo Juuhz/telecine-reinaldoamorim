@@ -3,67 +3,86 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+// Import Utils
+import Loader from '../loader';
+
 // Import Actions Redux
-import { closeModal } from '../../redux/actions';
+import { changeStatusModal, changeStatusLoader } from '../../redux/actions';
+
+// Import API
+import ModalProps from '../../api/modal';
 
 // Import Style
 import {
     ModalWrapper, ModalContent, CloseModal,
-    Thumbinial, Infos, Name, Stars, InfoStar,
-    InstaStats, ItemStats, Label, Value
+    Logo, Text, BoxInput, Input, Label,
+    ButtonCTA, TextFooter, HelpLink
 } from './styled';
 
 class Modal extends Component {
 
-    // Evento para fechar o Modal
-    changeStatusModal = () => {
-        const { closeModal } = this.props;
-        closeModal();
+    // Evento para enviar os dados do formulário
+    sendForm = async ( form ) => {
+        form.preventDefault();
+
+        // Pega actions para as próximas ações
+        const { changeStatusLoader } = this.props;
+
+        // Chama evento para exibir o Loader
+        changeStatusLoader( true );
+        
+        // Simula requisição para enviar os dados
+        const response = await new Promise((resolve) => {
+            setTimeout(() => {
+              resolve({
+                   success: true,
+                   mensage: ""
+              });
+            }, 4000);
+        });
+
+        // Caso tenha retornado sucesso, exibe mensagem de sucesso
+        if( response.sucess ){
+
+        }
     }
 
     render() {
-        const influence = this.props.modalInfluencer;
-
+        const { text, inputs, buttonCTA, textFooter, link } = ModalProps;
+        const { loaderStatus } = this.props;
         return (
             <ModalWrapper id="modal">
+                <CloseModal onClick={() => this.props.changeStatusModal(false)}>X</CloseModal>
                 <ModalContent>
-                    <CloseModal onClick={this.changeStatusModal}>X</CloseModal>
-                    <Thumbinial src={influence.image} alt={`Influenciador: ${influence.name}`} />
-                    <Infos>
-                        <Name>{influence.name}</Name>
-                        <Stars>
-                            <ReactStars
-                                count={5}
-                                value={influence.stars}
-                                size={20}
-                                color2={'#ffd700'}
-                                edit={false}
-                            />
-                            <InfoStar>{influence.stars} de 5</InfoStar>
-                        </Stars>
-                        <InstaStats>
-                            <ItemStats>
-                                <Label>Segmuinto:</Label>
-                                <Value>{influence.category}</Value>
-                            </ItemStats>
-                            <ItemStats>
-                                <Label>Seguidores:</Label>
-                                <Value>{influence.followers}</Value>
-                            </ItemStats>
-                            <ItemStats>
-                                <Label>Seguidores Reais:</Label>
-                                <Value>{influence.real_followers}%</Value>
-                            </ItemStats>
-                            <ItemStats>
-                                <Label>Média de Likes:</Label>
-                                <Value>{influence.like_avg}</Value>
-                            </ItemStats>
-                            <ItemStats>
-                                <Label>Média de Comentários:</Label>
-                                <Value>{influence.comments_avg}</Value>
-                            </ItemStats>
-                        </InstaStats>
-                    </Infos>
+                    {
+                        !loaderStatus &&
+                            <div>
+                                <Logo />
+                                <Text
+                                    text={text}
+                                    tags={{html: 'span'}}
+                                />
+                                <form onSubmit={this.sendForm}>
+                                    {
+                                        inputs.map( ( input, key ) => {
+                                            return(
+                                                <BoxInput key={key}>
+                                                    <Label htmlFor={input.id}>{input.label}</Label>
+                                                    <Input type={input.type} name={input.id} id={input.id} required/>
+                                                </BoxInput>
+                                            )
+                                        })
+                                    }
+                                    <ButtonCTA>{buttonCTA}</ButtonCTA>
+                                </form>
+                                <TextFooter>{textFooter}</TextFooter>
+                                <HelpLink href={link.href} target="_blank">{link.text}</HelpLink>
+                            </div>
+                    }
+                    {
+                        loaderStatus &&
+                            <Loader />
+                    }
                 </ModalContent>
             </ModalWrapper>
         );
@@ -71,11 +90,11 @@ class Modal extends Component {
 }
 
 function mapStateToProps ( state ) {
-    const { modalInfluencer } = state;
-    return { modalInfluencer }
+    const { loaderStatus } = state;
+    return { loaderStatus }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({ closeModal }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ changeStatusModal, changeStatusLoader }, dispatch)
 
 export default connect(
     mapStateToProps,

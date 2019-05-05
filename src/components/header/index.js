@@ -1,15 +1,24 @@
+// Imports React Defaults
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+// Import Actions Redux
+import { changeStatusModal } from '../../redux/actions';
+
 // Import Ultils
 import { Container } from '../../utils/class';
+import Button from '../button';
 
 // Import API
 import HeaderProps from '../../api/header';
 
 // Import Style
 import {
-    Section, Logo, Title, Text, Button
+    Section, Logo, Title, Text
 } from './styled';
 
-const Header = () => {
+const Header = ({ changeStatusModal }) => {
     const { title, text, buttonCTA } = HeaderProps;
     return(
         <Section id="header">
@@ -21,13 +30,25 @@ const Header = () => {
                 />
                 <Text
                     text={text}
-                    tags={{html: 'h3'}}   
+                    tags={{html: 'h3'}}
                 />
-                <Button>{buttonCTA}</Button>
+                <Button
+                    text={buttonCTA} 
+                    onClick={() => changeStatusModal(true)}
+                />
             </Container>
         </Section>
     );
 }
 
+function mapStateToProps ( state ) {
+    const { modalStatus } = state;
+    return { modalStatus }
+}
 
-export default Header;
+const mapDispatchToProps = dispatch => bindActionCreators({ changeStatusModal }, dispatch)
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Header);

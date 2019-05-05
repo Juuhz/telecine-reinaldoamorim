@@ -1,15 +1,15 @@
 // Tipos de Actions
 export const actionTypes = {
-    SET_INFLUENCER: 'SET_INFLUENCER',
-    CLOSE_MODAL: 'CLOSE_MODAL',
+    MODAL_STATUS: 'MODAL_STATUS',
+    LOADER_STATUS: 'LOADER_STATUS',
 }
 
-// Action que seta o objeto do influenciador no Modal
-export const setInfluencerModal = ( incluencer ) => {
-    return { type: actionTypes.SET_INFLUENCER, modalInfluencer: incluencer }
+// Action que fecha/abre o Modal
+export const changeStatusModal = ( status ) => {
+    return { type: actionTypes.MODAL_STATUS, modalStatus: status }
 }
 
-// Action que fecha o Modal
-export const closeModal = () => {
-    return { type: actionTypes.CLOSE_MODAL }
+// Action que exibe/esconde o loader
+export const changeStatusLoader = ( status ) => {
+    return { type: actionTypes.LOADER_STATUS, loaderStatus: status }
 }
