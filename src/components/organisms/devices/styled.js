@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 
 // Import Utils
+import MDReactComponent from 'markdown-react-js';
 import { Wrapper } from '../../../utils/class';
 import { LIGTH_GRAY } from '../../../utils/variables';
 import { rem } from '../../../utils/helpers';
@@ -36,19 +37,46 @@ export const Title = styled.h2`
     }
 `;
 
-export const ItensWrapper = styled.div`
-    margin-top: ${rem(10)};
-`;
-
-export const ItemWrapper = styled.div`
-    position: relative;
-`;
-
-export const TitleItem = styled.p`
+export const SubTitle = styled.p`
     font-size: ${rem(20)};
     line-height: 1.2;
     margin-bottom: ${rem(20)};
     font-weight: 300;
+    max-width: ${rem(320)};
+
+    @media (min-width: 734px){
+        max-width: 100%;
+    }
+`;
+
+export const Text = styled(MDReactComponent)`
+    font-size: ${rem(14)};
+    font-weight: 300;
+    margin: ${rem(0)} auto ${rem(20)};
+    line-height: 1.7;
+    display: none;
+
+    @media (min-width: 734px){
+        display: inline-block;
+    }
+`;
+
+export const ItensWrapper = styled.div`
+    margin-top: ${rem(10)};
+
+    @media (min-width: 734px){
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+`;
+
+export const ItemWrapper = styled.div`
+    position: relative;
+
+    @media (min-width: 734px){
+        width: 46%;
+    }
 `;
 
 export const ImageItem = styled.img`
@@ -78,7 +106,7 @@ export const Label = styled.li`
     margin-bottom: ${rem(15)};
     position: relative;
     padding-left: ${rem(27)};
-
+    
     &:before{
         content: "";
         position: absolute;

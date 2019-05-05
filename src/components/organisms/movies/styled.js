@@ -60,6 +60,15 @@ export const Section = styled(Wrapper)`
                     z-index: 2;
                 }
             }
+
+            @media (min-width: 734px){
+                &:hover{
+                    .playButton{
+                        opacity: 1;
+                        z-index: 2;
+                    }
+                }
+            }
         }
         &.slick-initialized .slick-slide{
             display: block;
@@ -96,6 +105,7 @@ export const ItemWrapper = styled.div`
     position: relative;
     padding: 0px ${rem(12)};
     outline: none;
+    box-sizing: border-box;
 `;
 
 export const Image = styled.img`

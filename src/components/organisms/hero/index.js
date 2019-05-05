@@ -21,7 +21,7 @@ const Hero = ({ title, text, buttonCTA, changeStatusModal }) => {
             <Container>
                 <Logo title="true" />
                 <Title 
-                    text={title.mobile}
+                    text={title}
                     tags={{html: 'h2'}}
                 />
                 <Text

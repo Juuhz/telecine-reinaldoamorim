@@ -1,8 +1,9 @@
 {
     "title": "Dispositivos",
+    "subTitle": "O Melhor catálogo. Em todas as telas.",
+    "text": "Não importa onde você esteja, ou em qual dispositivo está, o Telecine Play sempre estará com você.",
     "itens": [
         {
-            "title": "O Melhor catálogo. Em todas as telas.",
             "image": {
                 "src": "/static/images/1.jpg",
                 "alt": "Cena do filme Tomb Raider",

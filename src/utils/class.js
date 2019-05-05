@@ -13,5 +13,10 @@ export const Container = styled.div`
     margin: 0 auto;
     padding: 0px ${rem(15)};
     width: 100%;
+
+    @media (min-width: 734px){
+        max-width: ${rem(704)};
+        padding: 0px;
+    }
 `;
 

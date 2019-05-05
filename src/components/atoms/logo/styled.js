@@ -10,6 +10,10 @@ export const LogoTitle = styled.h1`
     background: url('/static/images/logo.svg') no-repeat;
     background-size: cover;
     margin: ${rem(30)} auto;
+
+    @media (min-width: 734px){
+        margin: ${rem(30)} 0;
+    }
 `;
 
 export const LogoImg = styled.div`

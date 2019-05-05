@@ -10,6 +10,24 @@ export const Section = styled(Wrapper)`
     width: 100%;
     text-align: center;
     color: #FFF;
+    
+    @media (min-width: 734px){
+        text-align: left;
+        display: inline-block;
+
+        &:after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: calc( 100% + 160px );
+            background: url(/static/images/hero-bg.jpeg) no-repeat;
+            background-size: cover;
+            top: 0px;
+            left: 0px;
+            opacity: 0.3;
+            z-index: -1;
+        }
+    }
 `;
 
 export const Title = styled(MDReactComponent)`
@@ -17,9 +35,14 @@ export const Title = styled(MDReactComponent)`
     font-weight: 300;
     display: inline-block;
     line-height: 1.7;
-
+    max-width: ${rem(250)};
+    
     strong{
         font-weight: 500;
+    }
+
+    @media (min-width: 734px){
+        max-width: ${rem(300)};
     }
 `;
 
@@ -27,8 +50,10 @@ export const Text = styled(MDReactComponent)`
     font-size: ${rem(14)};
     font-weight: 300;
     max-width: ${rem(230)};
-    margin: 0 auto;
+    margin: ${rem(25)} auto ${rem(30)};
     line-height: 1.7;
-    margin-top: ${rem(25)};
-    margin-bottom: ${rem(30)};
+
+    @media (min-width: 734px){
+        margin: ${rem(25)} 0 ${rem(30)};
+    }
 `;
