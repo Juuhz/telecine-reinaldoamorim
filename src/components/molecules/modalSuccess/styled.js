@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 // Import Utils
 import MDReactComponent from 'markdown-react-js';
+import Button from '../../atoms/button';
 import { rem } from '../../../utils/helpers';
 
 export const Section = styled.div`
@@ -36,4 +37,8 @@ export const Text = styled(MDReactComponent)`
     @media (min-width: 375px){
         font-size: ${rem(15)};
     }
+`;
+
+export const ButtonCTA = styled(Button)`
+    margin-top: ${rem(20)};
 `;

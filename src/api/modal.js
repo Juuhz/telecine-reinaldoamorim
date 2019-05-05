@@ -50,6 +50,7 @@ export const ModalSuccessProps = {
     "title": "Falta pouco!",
     "text": "Em instantes você receberá seu **login e senha** através do e-mail cadastrado para aproveitar seus **7 dias grátis**",
     "textFooter": "Ficou com alguma dúvida?",
+    "buttonCTA": "Continue navegando",
     "link": {
         "href": "https://ajuda.telecineplay.com.br/",
         "text": "Acesse nossa ajuda"

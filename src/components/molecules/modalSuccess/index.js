@@ -14,11 +14,11 @@ import HelpLink from '../../atoms/helpLink';
 
 // Import Style
 import {
-    Section, BoxContent, Title, Text
+    Section, BoxContent, Title, Text, ButtonCTA
 } from './styled';
 
-const ModalSuccess = () => {
-    const { title, text, textFooter, link } = ModalSuccessProps;
+const ModalSuccess = ({ changeStatusModal }) => {
+    const { title, text, buttonCTA, textFooter, link } = ModalSuccessProps;
     return (
         <Section id="modalSuccess">
             <Logo />
@@ -27,6 +27,10 @@ const ModalSuccess = () => {
                 <Text
                     text={text}
                     tags={{html: 'span'}}
+                />
+                <ButtonCTA 
+                    text={buttonCTA}
+                    onClick={() => changeStatusModal(false)}
                 />
             </BoxContent>
             <HelpLink 

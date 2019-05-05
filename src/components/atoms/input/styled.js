@@ -31,7 +31,7 @@ export const Field = styled(InputMask)`
     padding: ${rem(10)} 0px;
     color: #FFF;
     background: transparent;
-    border-bottom: 1px solid #FFF;
+    border-bottom: ${rem(1)} solid #FFF;
     font-size: ${rem(14)};
     font-weight: 100;
     outline: none;
