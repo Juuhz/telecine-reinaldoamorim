@@ -13,11 +13,18 @@ export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.MODAL_STATUS:
       return Object.assign({}, state, {
-        modalStatus: action.modalStatus
+        modalStatus: action.modalStatus,
+        loaderStatus: false,
+        sucessModal: false
       })
-    case actionTypes.LOADER_STATUS:
+      case actionTypes.LOADER_STATUS:
       return Object.assign({}, state, {
         loaderStatus: action.loaderStatus
+      })
+    case actionTypes.SHOW_MODAL_SUCCESS:
+      return Object.assign({}, state, {
+        loaderStatus: false,
+        sucessModal: true
       })
     default:
       return state

@@ -2,18 +2,18 @@
 import { connect } from 'react-redux';
 
 // Import Components
-import Page from '../components/page';
-import Header from '../components/header';
-import Modal from '../components/modal';
-import Filmes from '../components/filmes';
-import Dispositivos from '../components/dispositivos';
-import Footer from '../components/footer';
+import Page from '../components/template/page';
+import Hero from '../components/organisms/hero';
+import Movies from '../components/organisms/movies';
+import Devices from '../components/organisms/devices';
+import Footer from '../components/organisms/footer';
+import Modal from '../components/organisms/modal';
 
 const Home = ({ modalStatus }) => (
   <Page>
-    <Header />
-    <Filmes />
-    <Dispositivos />
+    <Hero />
+    <Movies />
+    <Devices />
     <Footer />
     {
       modalStatus &&

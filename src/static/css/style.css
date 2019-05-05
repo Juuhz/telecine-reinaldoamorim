@@ -32,5 +32,5 @@ ul,li{
 /* SELECIONAR */
 ::selection {
     background-color: #838D9A !important;
-    color: #293144 !important;
+    color: #FFF !important;
 }
