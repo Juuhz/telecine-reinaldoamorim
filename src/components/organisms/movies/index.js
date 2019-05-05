@@ -9,9 +9,6 @@ import { changeStatusModal } from '../../../redux/actions';
 // Import Ultils
 import Slider from "react-slick";
 
-// Import API
-import MoviesProps from '../../../api/movies';
-
 // Import Style
 import {
     Section, ItemWrapper, Image, Play
@@ -31,7 +28,7 @@ class Movies extends Component{
 
     render(){
         // Pega as informações dos filmes
-        const { data } = MoviesProps;
+        const { data } = this.props;
 
         // Configuração do slide
         const settings = {

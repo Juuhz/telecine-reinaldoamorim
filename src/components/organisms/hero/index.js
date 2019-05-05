@@ -10,16 +10,12 @@ import { Container } from '../../../utils/class';
 import Button from '../../atoms/button';
 import Logo from '../../atoms/logo';
 
-// Import API
-import HeroProps from '../../../api/hero';
-
 // Import Style
 import {
     Section, Title, Text
 } from './styled';
 
-const Hero = ({ changeStatusModal }) => {
-    const { title, text, buttonCTA } = HeroProps;
+const Hero = ({ title, text, buttonCTA, changeStatusModal }) => {
     return(
         <Section id="hero">
             <Container>

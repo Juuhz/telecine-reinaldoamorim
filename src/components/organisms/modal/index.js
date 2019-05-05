@@ -15,13 +15,13 @@ import {
     ModalWrapper, ModalContent, CloseModal
 } from './styled';
 
-const Modal = ({ changeStatusModal, loaderStatus, sucessModal }) => (
+const Modal = ({ data, changeStatusModal, loaderStatus, sucessModal }) => (
     <ModalWrapper id="modal">
         <CloseModal onClick={() => changeStatusModal(false)}>X</CloseModal>
         <ModalContent>
             {
                 ( !loaderStatus && !sucessModal ) && 
-                    <ModalForm />
+                    <ModalForm {...data} />
             }
             {
                 ( loaderStatus && !sucessModal ) &&
@@ -29,7 +29,11 @@ const Modal = ({ changeStatusModal, loaderStatus, sucessModal }) => (
             }
             {
                 sucessModal &&
-                    <ModalSuccess />
+                    <ModalSuccess 
+                        textFooter={data.textFooter} 
+                        link={data.link} 
+                        {...data.success} 
+                    />
             }
         </ModalContent>
     </ModalWrapper>

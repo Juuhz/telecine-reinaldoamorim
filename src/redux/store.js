@@ -1,6 +1,6 @@
 // Estado inicial da aplicação
 export const initialState = {
-    modalStatus: true,
+    modalStatus: false,
     loaderStatus: false,
-    sucessModal: true,
+    sucessModal: false,
 }

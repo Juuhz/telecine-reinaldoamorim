@@ -4,9 +4,6 @@ import React, { Component } from 'react';
 // Import Ultils
 import { Container } from '../../../utils/class';
 
-// Import API
-import DevicesProps from '../../../api/devices';
-
 // Import Style
 import {
     Section, Title, ItensWrapper, ItemWrapper,
@@ -34,7 +31,7 @@ class Devices extends Component{
     )
 
     render(){
-        const { title, itens } = DevicesProps;
+        const { title, itens } = this.props;
 
         return(
             <Section id="devices">

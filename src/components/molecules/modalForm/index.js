@@ -6,9 +6,6 @@ import { bindActionCreators } from 'redux';
 // Import Actions Redux
 import { changeStatusLoader, showModalSuccess } from '../../../redux/actions';
 
-// Import API
-import { ModalProps } from '../../../api/modal';
-
 // Import Utils
 import { Wrapper } from '../../../utils/class';
 import Logo from '../../atoms/logo';
@@ -48,7 +45,7 @@ class ModalForm extends Component {
     }
 
     render() {
-        const { text, inputs, buttonCTA, textFooter, link } = ModalProps;
+        const { text, inputs, buttonCTA, textFooter, link } = this.props;
         return (
             <Wrapper id="modalForm">
                 <Logo />
