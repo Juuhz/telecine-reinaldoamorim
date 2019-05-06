@@ -14,6 +14,10 @@ export const Section = styled(Wrapper)`
     background: ${LIGTH_GRAY};
     padding: 0px ${rem(15)} ${rem(1)};
     margin-top: ${rem(-50)};
+
+    @media (min-width: 1500px){
+        padding-bottom: ${rem(30)};
+    }
 `;
 
 export const BoxInfos = styled.div`
