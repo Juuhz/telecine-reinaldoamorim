@@ -15,6 +15,7 @@ Landing Page desenvolvida para teste de conhecimento no processo seletivo da equ
 - Testes unitários
 - Aplicação Isomorfica ( Para SEO )
 - Boas práticas de SEO
+- PageSpeed Insights ( Mobile: 80 / Desktop: 98 )
 
 ## Vamos começar?
 
