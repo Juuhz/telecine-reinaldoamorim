@@ -19,7 +19,7 @@ const Hero = ({ title, text, buttonCTA, changeStatusModal }) => {
     return(
         <Section id="hero">
             <Container>
-                <Logo title="true" />
+                <Logo title="true">{title}</Logo>
                 <Title 
                     text={title}
                     tags={{html: 'h2'}}
