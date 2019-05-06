@@ -34,6 +34,13 @@ export const Section = styled(Wrapper)`
             background: url('/static/images/hero-bg-large.jpeg') no-repeat center left;
         }
     }
+
+    @media (min-width: 1500px){
+        padding: ${rem(100)} 0px;
+        &:after{
+            background-size: cover;
+        }
+    }
 `;
 
 export const Title = styled(MDReactComponent)`

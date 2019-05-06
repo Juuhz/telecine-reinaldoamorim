@@ -26,5 +26,9 @@ export const Container = styled.div`
     @media (min-width: 1200px){
         max-width: ${rem(1170)};
     }
+
+    @media (min-width: 1500px){
+        max-width: ${rem(1344)};
+    }
 `;
 

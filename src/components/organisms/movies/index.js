@@ -38,7 +38,7 @@ class Movies extends Component{
             centerMode: true,
             infinite: true,
             centerPadding: "60px",
-            slidesToShow: 6,
+            slidesToShow: 8,
             speed: 500,
             responsive: [
                 {
