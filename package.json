@@ -6,10 +6,10 @@
   "scripts": {
     "test": "jest --passWithNoTests",
     "dev": "node server.js",
-    "build": "NODE_ENV=production && next build ./src",
+    "build": "export NODE_ENV=production && next build ./src",
     "pm2": "pm2 restart server.js",
     "nginx": "sudo systemctl restart nginx",
-    "start": "NODE_ENV=production && next start ./src"
+    "start": "export NODE_ENV=production && next start ./src"
   },
   "repository": {
     "type": "git",
