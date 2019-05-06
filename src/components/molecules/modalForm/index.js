@@ -53,7 +53,7 @@ class ModalForm extends Component {
                     text={text}
                     tags={{html: 'span'}}
                 />
-                <form onSubmit={this.sendForm} autoComplete="off">
+                <form onSubmit={this.sendForm}>
                     {
                         inputs.map( ( input, key ) => (
                             <Field 
