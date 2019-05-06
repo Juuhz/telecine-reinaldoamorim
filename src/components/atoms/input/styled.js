@@ -35,6 +35,7 @@ export const Field = styled(InputMask)`
     font-size: ${rem(14)};
     font-weight: 100;
     outline: none;
+    border-radius: 0px;
 
     &:-webkit-autofill,
     &:-webkit-autofill:hover,

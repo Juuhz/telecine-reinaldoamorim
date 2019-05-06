@@ -12,7 +12,7 @@ export const ModalWrapper = styled.div`
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@ export const ModalWrapper = styled.div`
 export const ModalContent = styled.div`
     width: 100%;
     max-width: 100%;
-    height: 100%;
+    height: 100vh;
     background: ${DARK_GRAY};
     position: relative;
     padding: ${rem(25)};
