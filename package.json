@@ -1,10 +1,10 @@
 {
-  "name": "ra_react",
+  "name": "telecine-reinaldoamorim",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --passWithNoTests",
     "dev": "node server.js",
     "build": "set NODE_ENV=production && next build ./src",
     "pm2": "pm2 restart server.js",
@@ -13,11 +13,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/juuhz/ra_react.git"
+    "url": "git+ssh://git@bitbucket.org/juuhz/telecine-reinaldoamorim.git"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/juuhz/ra_react#readme",
+  "homepage": "https://bitbucket.org/juuhz/telecine-reinaldoamorim#readme",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "express": "^4.16.4",
@@ -31,7 +31,9 @@
     "react-slick": "^0.24.0",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
-    "slick-carousel": "^1.8.1",
     "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
   }
 }
