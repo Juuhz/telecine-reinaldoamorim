@@ -2,6 +2,8 @@
 
 Landing Page desenvolvida para teste de conhecimento no processo seletivo da equipe Telecine.
 
+[http://telecine.reinaldoamorim.com.br/](http://telecine.reinaldoamorim.com.br/)
+
 ## Tecnologias / Metodologias, utilizadas no projeto 
 - NextJS ( React )
 - Redux
