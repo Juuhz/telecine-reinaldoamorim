@@ -36,6 +36,15 @@ export const Field = styled(InputMask)`
     font-weight: 100;
     outline: none;
 
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active,
+    &:-internal-autofill-selected {    
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: #fff !important;
+    }
+
     &:active,
     &:focus,
     &:valid{
