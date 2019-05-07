@@ -42,7 +42,7 @@ class Movies extends Component{
             speed: 500,
             responsive: [
                 {
-                    breakpoint: 1400,
+                    breakpoint: 1500,
                     settings: {
                         slidesToShow: 5,
                     }
